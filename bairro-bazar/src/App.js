@@ -1,10 +1,11 @@
 import React from 'react';
+import AppRoutes from './Routes/AppRoutes';
+
+import './Styles/main.scss'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <AppRoutes />
   );
 }
 

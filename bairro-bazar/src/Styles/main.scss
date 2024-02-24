@@ -1,0 +1,94 @@
+$standardSpace: 16px;
+$fontStyle: $standardSpace sans-serif;
+
+$primaryColor: #000000;
+$secondColor: #686868;
+$purpleColor: #8E53FF;
+$greenColor: #58AF00;
+$pinkColor: #C91ECC;
+$darkPinkColor: #AC0053;
+$blueColor: #08B4B4;
+$darkBlueColor: #361ECC;
+$orangeColor: #EC7F00;
+$redColor: #B60000;
+$whiteColor: #ffff;
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: $fontStyle;
+}
+
+button {
+    font: $fontStyle;
+    padding: $standardSpace;
+    background-color: $purpleColor;
+    border: none;
+    color: $whiteColor;
+    max-width: 200px;
+    width: 100%;
+}
+nav {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .nav-container {
+        max-width: 1200px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            height: 30px;
+        }
+
+        button {
+            font: $fontStyle;
+            padding: $standardSpace;
+            background-color: $whiteColor;
+            border: none;
+            color: $secondColor;
+            max-width: 200px;
+            width: 100%;
+            height: 30px;
+        }
+
+        #btn-entrar {
+            border: none;
+            border-right: solid 1px gray;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        #btn-cadastrar {
+            border: none;
+            border-left: solid 1px gray;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .without-space {
+            display: flex;
+            
+        }
+    }
+}
+
+.input-section {
+    height: 20vh;
+    background-color: burlywood;
+}
+
+.product-section {
+    height: 80vh;
+    background-color: cadetblue;
+}

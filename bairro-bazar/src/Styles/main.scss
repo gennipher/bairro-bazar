@@ -7,11 +7,14 @@ $purpleColor: #8E53FF;
 $greenColor: #58AF00;
 $pinkColor: #C91ECC;
 $darkPinkColor: #AC0053;
-$blueColor: #08B4B4;
+$bluePoolColor: #08B4B4;
+$blueColor: #08A3E5;
 $darkBlueColor: #361ECC;
 $orangeColor: #EC7F00;
 $redColor: #B60000;
 $whiteColor: #ffff;
+$shadow: 0 0 5px rgba(51, 51, 51, 0.2);
+$blackShadow: 0 0 5px #00000090;
 
 * {
     margin: 0;
@@ -33,6 +36,7 @@ button {
     max-width: 200px;
     width: 100%;
 }
+
 nav {
     height: 10vh;
     display: flex;
@@ -131,16 +135,20 @@ nav {
 
 .input-section {
     height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .menu-card {
         display: flex;
         justify-content: center;
-        align-items: center;
-        height: -webkit-fill-available;
+        align-items: flex-start;
+        width: min-content;
 
         .cards {
+            width: 7rem;
             margin: 20px;
-            text-align-last: center;
+            text-align: center;
             cursor: pointer;
 
             img {
@@ -153,6 +161,11 @@ nav {
             p {
                 font-weight: 550;
                 font-size: large;
+            }
+
+            &:hover {
+                color: $purpleColor;
+                transition: all 0.4s ease;
             }
 
         }
@@ -170,16 +183,15 @@ nav {
 }
 
 .product-section {
-    height: 80vh;
-    background-color: #D6D6D6;
     display: flex;
+    justify-content: space-around;
+    align-items: flex-start;  
 
     .product-card {
-        display: flex;
-        flex-direction: column;
-        background-color: $whiteColor;
-        margin: 20px;
-        padding: 5px;
+        height: 100%;
+        box-shadow: $shadow;
+        padding: 10px;
+        width: min-content;
 
         img {
             size: 25%;
@@ -188,6 +200,8 @@ nav {
 
         p{
             margin: 10px;
+            text-align: justify;
+            word-wrap: break-word;
         }
 
         .produto-titulo {
@@ -205,5 +219,29 @@ nav {
             font-size: 18px;
 
         }
+
+        &:hover {
+            box-shadow: none;
+            box-shadow: $blackShadow;
+            transition: all 0.4s ease;
+        }
     }
+
+    .div-fazer-proposta {
+        border: 1px solid $blueColor;
+        color: $blueColor;
+        padding: 2px 5px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        color: $blueColor;
+        cursor: pointer;
+
+        &:hover {
+            color: $whiteColor;
+            background-color: $blueColor;
+            transition: all 0.4s ease;
+        }
+    }
+    
 }

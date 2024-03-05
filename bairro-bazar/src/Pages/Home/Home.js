@@ -47,35 +47,35 @@ function Home() {
                 <div className="menu-card">
                     <div className="cards">
                         <img src={ArtigosInfantis} alt=""/>
-                        <p className="manu-card-text">Artigos <br></br> Infantis</p>
+                        <p className="manu-card-text">Artigos Infantis</p>
                     </div>
                     <div className="cards">
                         <img src={AutosPecas} alt=""/>
-                        <p className="manu-card-text">Autos <br></br> e Peças</p>
+                        <p className="manu-card-text">Autos e Peças</p>
                     </div>
                     <div className="cards">
                         <img src={CasaDecoracao} alt=""/>
-                        <p className="manu-card-text">Casa e <br></br> Decoração</p>
+                        <p className="manu-card-text">Casa e Decoração</p>
                     </div>
                     <div className="cards">
                         <img src={EletronicosCelulares} alt=""/>
-                        <p className="manu-card-text">Eletrônicos e <br></br> Celulares</p>
+                        <p className="manu-card-text">Eletrônicos e Celulares</p>
                     </div>
                     <div className="cards">
                         <img src={EsporteLazer} alt=""/>
-                        <p className="manu-card-text">Esporte e <br></br> Lazer</p>
+                        <p className="manu-card-text">Esporte e Lazer</p>
                     </div>
                     <div className="cards">
                         <img src={ModaBeleza} alt=""/>
-                        <p className="manu-card-text">Moda e <br></br> Beleza</p>
+                        <p className="manu-card-text">Moda e Beleza</p>
                     </div>
                     <div className="cards">
                         <img src={MusicasHobbies} alt=""/>
-                        <p className="manu-card-text">Músicas e <br></br> Hobbies</p>
+                        <p className="manu-card-text">Músicas e Hobbies</p>
                     </div>
                     <div className="cards">
                         <img src={ServicosVagas} alt=""/>
-                        <p className="manu-card-text">Serviços e <br></br> Vagas</p>
+                        <p className="manu-card-text">Serviços e Vagas</p>
                     </div>
                 </div>
             </section>
@@ -88,32 +88,39 @@ function Home() {
                 <div className="product-card">
                     <p className="produto-titulo">Guarda Roupa de Solteiro Madeira Maciça</p>
                     <img src={ProdutoArmario} alt="Guarda Roupa de Solteiro Madeira Maciça" />
-                    <p className="produto-descricao">Vendo este guarda roupa de solteiro em <br></br> madeira maciça super bem conservado.<br></br> Aceito permuta, dinheiro, cartão ou pix.<br></br> Não tenho frete, então é com retirada no local. </p>
+                    <p className="produto-descricao">Vendo este guarda roupa de solteiro em madeira maciça super bem conservado. Aceito permuta, dinheiro, cartão ou pix. Não tenho frete, então é com retirada no local. </p>
                     <p className="produto-preco">R$ 800,00</p>
+                    <div className="div-fazer-proposta">
+                        <span>Fazer Proposta</span>
+                    </div>
+                    
                 </div>
                 <div className="product-card">
                     <p className="produto-titulo">Guarda Roupa de Solteiro Madeira Maciça</p>
                     <img src={ProdutoArmario} alt="Guarda Roupa de Solteiro Madeira Maciça" />
-                    <p className="produto-descricao">Vendo este guarda roupa de solteiro em <br></br> madeira maciça super bem conservado.<br></br> Aceito permuta, dinheiro, cartão ou pix.<br></br> Não tenho frete, então é com retirada no local. </p>
+                    <p className="produto-descricao">Vendo este guarda roupa de solteiro em  madeira maciça super bem conservado. Aceito permuta, dinheiro, cartão ou pix. Não tenho frete, então é com retirada no local. </p>
                     <p className="produto-preco">R$ 800,00</p>
+                    <div className="div-fazer-proposta">
+                        <span>Fazer Proposta</span>
+                    </div>
                 </div>
                 <div className="product-card">
                     <p className="produto-titulo">Guarda Roupa de Solteiro Madeira Maciça</p>
                     <img src={ProdutoArmario} alt="Guarda Roupa de Solteiro Madeira Maciça" />
-                    <p className="produto-descricao">Vendo este guarda roupa de solteiro em <br></br> madeira maciça super bem conservado.<br></br> Aceito permuta, dinheiro, cartão ou pix.<br></br> Não tenho frete, então é com retirada no local. </p>
+                    <p className="produto-descricao">Vendo este guarda roupa de solteiro em  madeira maciça super bem conservado. Aceito permuta, dinheiro, cartão ou pix. Não tenho frete, então é com retirada no local. </p>
                     <p className="produto-preco">R$ 800,00</p>
+                    <div className="div-fazer-proposta">
+                        <span>Fazer Proposta</span>
+                    </div>
                 </div>
                 <div className="product-card">
                     <p className="produto-titulo">Guarda Roupa de Solteiro Madeira Maciça</p>
                     <img src={ProdutoArmario} alt="Guarda Roupa de Solteiro Madeira Maciça" />
-                    <p className="produto-descricao">Vendo este guarda roupa de solteiro em <br></br> madeira maciça super bem conservado.<br></br> Aceito permuta, dinheiro, cartão ou pix.<br></br> Não tenho frete, então é com retirada no local. </p>
+                    <p className="produto-descricao">Vendo este guarda roupa de solteiro em  madeira maciça super bem conservado. Aceito permuta, dinheiro, cartão ou pix. Não tenho frete, então é com retirada no local. </p>
                     <p className="produto-preco">R$ 800,00</p>
-                </div>
-                <div className="product-card">
-                    <p className="produto-titulo">Guarda Roupa de Solteiro Madeira Maciça</p>
-                    <img src={ProdutoArmario} alt="Guarda Roupa de Solteiro Madeira Maciça" />
-                    <p className="produto-descricao">Vendo este guarda roupa de solteiro em <br></br> madeira maciça super bem conservado.<br></br> Aceito permuta, dinheiro, cartão ou pix.<br></br> Não tenho frete, então é com retirada no local. </p>
-                    <p className="produto-preco">R$ 800,00</p>
+                    <div className="div-fazer-proposta">
+                        <span>Fazer Proposta</span>
+                    </div>
                 </div>
                 
             </section>

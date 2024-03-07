@@ -3,6 +3,7 @@ $fontStyle: $standardSpace sans-serif;
 
 $primaryColor: #000000;
 $secondColor: #686868;
+$lightGrayColor: #F5F5F5;
 $purpleColor: #8E53FF;
 $greenColor: #58AF00;
 $pinkColor: #C91ECC;
@@ -25,6 +26,9 @@ $blackShadow: 0 0 5px #00000090;
 
 body {
     font: $fontStyle;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 button {
@@ -186,6 +190,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;  
+    margin-bottom: 50px;
 
     .product-card {
         height: 100%;

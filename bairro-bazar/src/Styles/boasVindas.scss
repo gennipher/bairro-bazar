@@ -1,0 +1,111 @@
+$secondColor: #686868;
+$lightGrayColor: #F5F5F5;
+$purpleColor: #8E53FF;
+$lightPurpleColor: #9763ff8f;
+$pinkColor: #FF79CC;
+$whiteColor: #ffff;
+$shadow: 0 0 10px rgba(238, 96, 205, 0.582);
+
+.bem-vindo {
+    display: flex;
+    flex-direction: column;
+    margin: 28px 45px ;
+
+    h1 {
+        font-size: 48px;
+        color: $purpleColor;
+        text-transform: uppercase
+    }
+
+    p {
+        font-size: 48px;
+        color: $secondColor;
+        padding: 10px 47px;
+    }
+}
+
+.sessao1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 52px;
+
+    p{
+        font-size: 32px;
+    }
+
+    .sessao1-texto {
+        width: 75%;
+    }
+
+    .sessao1-img {
+        width: 25%;
+        text-align: center;
+    }
+}
+
+.sessao2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 52px;
+
+    p{
+        font-size: 32px;
+        margin: 20px 0;
+    }
+
+    .sessao2-texto {
+        width: 80%;
+    }
+
+    .sessao2-img {
+        width: 25%;
+        text-align: center;
+    }
+}
+
+.sessao3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $lightPurpleColor;
+
+    .sessao3-convite {
+        margin: 10px 20px;
+        font-size: 32px;
+        max-width: 50rem;
+
+        p{
+            text-align: center;
+        }
+    }
+
+    .sessao3-btns {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        button {
+            margin: 10px 20px;
+            background-color: $pinkColor;
+            padding: 8px 32px;
+            font-size: 32px;
+            white-space: nowrap;
+            min-width: fit-content;
+            border-radius: 67px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $whiteColor;
+                color: $pinkColor;
+                box-shadow: $shadow;
+                transition: all 0.4s ease;
+            }
+        }
+    }
+}
+

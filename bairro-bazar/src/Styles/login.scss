@@ -1,0 +1,88 @@
+$standardSpace: 16px;
+$fontStyle: $standardSpace sans-serif;
+
+$primaryColor: #000000;
+$secondColor: #686868;
+$lightGrayColor: #F5F5F5;
+$purpleColor: #8E53FF;
+$greenColor: #58AF00;
+$pinkColor: #C91ECC;
+$darkPinkColor: #AC0053;
+$bluePoolColor: #08B4B4;
+$blueColor: #08A3E5;
+$darkBlueColor: #361ECC;
+$orangeColor: #EC7F00;
+$redColor: #B60000;
+$whiteColor: #ffff;
+$shadow: 0 0 5px rgba(51, 51, 51, 0.272);
+$blackShadow: 0 0 5px #00000090;
+
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: $shadow;
+    border-radius: 26px;
+    padding: 32px 56px;
+    max-width: 670px;
+    margin: auto;
+    margin-bottom: 108px;
+
+
+    div, input, button {
+        margin-top: 22px;
+        font-size: 22px;
+    }
+}
+
+.login-logo {
+    margin-top: 22px;
+}
+
+.login-titulo {
+    margin-top: 22px;
+}
+
+.login-form {
+    margin-top: 22px;
+    
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            border: 1px solid $secondColor;
+            border-radius: 50px;
+            padding: 10px;
+            max-width: 50vh;
+        }
+
+        button {
+            background-color: $purpleColor;
+            color: $whiteColor;
+            border-radius: 50px;
+            max-width: 50vh;
+        }
+    }
+}
+
+.login-social-icons {
+    text-align: center;
+
+    img {
+        margin: 0 10px;
+    }
+}
+
+.login-cadastro {
+
+    a {
+        text-decoration: none;
+    }
+
+    span {
+        margin-left: 5px;
+        color: $purpleColor;
+    }
+}

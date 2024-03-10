@@ -4,6 +4,8 @@ import Navbar from "../../Components/Navbar/Navbar"
 import Card from "../../Components/Card/Card"
 import MenuCard from "../../Components/MenuCard/MenuCard"
 
+import styles from "../../Styles/main.module.scss"
+
 function Home() {
     return (
         <>
@@ -12,10 +14,10 @@ function Home() {
             <MenuCard />
 
             <section>
-                <div className="categorias"> Mais Buscados</div>
+                <div className={styles.categorias}> Mais Buscados</div>
             </section>
 
-            <section className="product-section">
+            <section className={styles.productSection}>
                 <Card />   
                 <Card />  
                 <Card />    

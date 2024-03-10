@@ -6,7 +6,7 @@ $pinkColor: #FF79CC;
 $whiteColor: #ffff;
 $shadow: 0 0 10px rgba(238, 96, 205, 0.582);
 
-.bem-vindo {
+.bemVindo {
     display: flex;
     flex-direction: column;
     margin: 28px 45px ;
@@ -35,11 +35,11 @@ $shadow: 0 0 10px rgba(238, 96, 205, 0.582);
         font-size: 32px;
     }
 
-    .sessao1-texto {
+    .sessao1Texto {
         width: 75%;
     }
 
-    .sessao1-img {
+    .sessao1Img {
         width: 25%;
         text-align: center;
     }
@@ -57,11 +57,11 @@ $shadow: 0 0 10px rgba(238, 96, 205, 0.582);
         margin: 20px 0;
     }
 
-    .sessao2-texto {
+    .sessao2Texto {
         width: 80%;
     }
 
-    .sessao2-img {
+    .sessao2Img {
         width: 25%;
         text-align: center;
     }
@@ -74,7 +74,7 @@ $shadow: 0 0 10px rgba(238, 96, 205, 0.582);
     justify-content: space-between;
     background-color: $lightPurpleColor;
 
-    .sessao3-convite {
+    .sessao3Convite {
         margin: 10px 20px;
         font-size: 32px;
         max-width: 50rem;
@@ -84,7 +84,7 @@ $shadow: 0 0 10px rgba(238, 96, 205, 0.582);
         }
     }
 
-    .sessao3-btns {
+    .sessao3Btns {
         display: flex;
         flex-direction: row;
         justify-content: center;

@@ -8,31 +8,35 @@ import Favoritos from '../../assets/favoritos.png'
 import Batepapo from '../../assets/bate-papo.png'
 import Suporte from '../../assets/suporte.png'
 
+import styles from '../../Styles/main.module.scss'
+
 function Navbar() {
     return (
         <nav>
-            <div className="nav-container">
-                <div className="nav-container-left">
+            <div className={styles.navContainer}>
+                <div className={styles.navContainerLeft}>
                     <img style={{height: "50%", cursor: "pointer"}} src={Menu} alt="menu-hamburguer" />
                     <a href="/home">
                         <img style={{height: "60%"}} src={Logo} alt="Logo Bairro Bazar"/>
                     </a>
-                    <div className="nav-input-pesquisar">
-                        <input id="nav-input-pesquisar-input" type="text" placeholder="Pesquisar"/>
+                    <div className={styles.navInputPesquisar}>
+                        <input className={styles.navInputPesquisarInput} type="text" placeholder="Pesquisar"/>
                         <img src={Lupa} alt="lupa-pesqusiar"/>
                     </div>
                 </div>  
-                <div className="nav-container-right">
-                    <img src={AdicionarProduto} alt="adicionar produto"/>
+                <div className={styles.navContainerRight}>
+                    <a href="/novoProduto">
+                        <img src={AdicionarProduto} alt="adicionar produto"/>
+                    </a>
                     <img src={Favoritos} alt="favoritos"/>
                     <img src={Batepapo} alt="bate papo"/>
                     <img src={Suporte} alt="suporte"/>
-                    <div className="without-space">
+                    <div className={styles.withoutSpace}>
                         <a href="/login">
-                            <button id="btn-entrar" src="/login">Entrar</button>
+                            <button  className={styles.btnEntrar} src="/login">Entrar</button>
                         </a>
                         <a href="/cadastro">
-                            <button id="btn-cadastrar">Cadastrar</button>
+                            <button  className={styles.btnCadastrar}>Cadastrar</button>
                         </a>
                     </div>
                 </div>  

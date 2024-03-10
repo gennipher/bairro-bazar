@@ -9,41 +9,43 @@ import ModaBeleza from '../../assets/moda-beleza.png'
 import MusicasHobbies from '../../assets/musicas-hobbies.png'
 import ServicosVagas from '../../assets/servicos-vagas.png'
 
+import styles from '../../Styles/main.module.scss'
+
 function MenuCard() {
     return (
-        <section className="input-section">
-            <div className="menu-card">
-                <div className="cards">
+        <section className={styles.inputSection}>
+            <div className={styles.menuCard}>
+                <div className={styles.cards}>
                     <img src={ArtigosInfantis} alt=""/>
-                    <p className="manu-card-text">Artigos Infantis</p>
+                    <p className={styles.menuCardText}>Artigos Infantis</p>
                 </div>
-                <div className="cards">
+                <div className={styles.cards}>
                     <img src={AutosPecas} alt=""/>
-                    <p className="manu-card-text">Autos e Peças</p>
+                    <p className={styles.menuCardText}>Autos e Peças</p>
                 </div>
-                <div className="cards">
+                <div className={styles.cards}>
                     <img src={CasaDecoracao} alt=""/>
-                    <p className="manu-card-text">Casa e Decoração</p>
+                    <p className={styles.menuCardText}>Casa e Decoração</p>
                 </div>
-                <div className="cards">
+                <div className={styles.cards}>
                     <img src={EletronicosCelulares} alt=""/>
-                    <p className="manu-card-text">Eletrônicos e Celulares</p>
+                    <p className={styles.menuCardText}>Eletrônicos e Celulares</p>
                 </div>
-                <div className="cards">
+                <div className={styles.cards}>
                     <img src={EsporteLazer} alt=""/>
-                    <p className="manu-card-text">Esporte e Lazer</p>
+                    <p className={styles.menuCardText}>Esporte e Lazer</p>
                 </div>
-                <div className="cards">
+                <div className={styles.cards}>
                     <img src={ModaBeleza} alt=""/>
-                    <p className="manu-card-text">Moda e Beleza</p>
+                    <p className={styles.menuCardText}>Moda e Beleza</p>
                 </div>
-                <div className="cards">
+                <div className={styles.cards}>
                     <img src={MusicasHobbies} alt=""/>
-                    <p className="manu-card-text">Músicas e Hobbies</p>
+                    <p className={styles.menuCardText}>Músicas e Hobbies</p>
                 </div>
-                <div className="cards">
+                <div className={styles.cards}>
                     <img src={ServicosVagas} alt=""/>
-                    <p className="manu-card-text">Serviços e Vagas</p>
+                    <p className={styles.menuCardText}>Serviços e Vagas</p>
                 </div>
             </div>
         </section>

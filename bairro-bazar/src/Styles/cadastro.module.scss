@@ -18,7 +18,7 @@ $shadow: 0 0 5px rgba(51, 51, 51, 0.272);
 $blackShadow: 0 0 5px #00000090;
 
 
-.cadastro-container {
+.cadastroContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,15 +36,15 @@ $blackShadow: 0 0 5px #00000090;
     }
 }
 
-.cadastro-logo {
+.cadastroLogo {
     margin-top: 22px;
 }
 
-.cadastro-titulo {
+.cadastroTitulo {
     margin-top: 22px;
 }
 
-.cadastro-form {
+.cadastroForm {
     margin-top: 22px;
     
     form {
@@ -67,7 +67,7 @@ $blackShadow: 0 0 5px #00000090;
         }
     }
 
-    .form-colunas{
+    .formColunas{
         display: flex;
 
         .form-colunas-colunas {
@@ -76,7 +76,7 @@ $blackShadow: 0 0 5px #00000090;
     }
 }
 
-.cadastro-social-icons {
+.cadastroSocialIcons {
     text-align: center;
 
     img {
@@ -84,7 +84,7 @@ $blackShadow: 0 0 5px #00000090;
     }
 }
 
-.cadastro-cadastro {
+.cadastroCadastro {
 
     a {
         text-decoration: none;

@@ -5,26 +5,26 @@ import GoogleIcon from '../../assets/google-icon.png'
 import FacebookPinkIcon from '../../assets/facebook-icon-pink.png'
 
 import Navbar from "../../Components/Navbar/Navbar"
-import "../../Styles/cadastro.scss"
+import styles from "../../Styles/cadastro.module.scss"
 
 function Cadastro() {
     return (
         <>
             <Navbar />
-            <div className="cadastro-container">
-                <div className="cadastro-logo">
+            <div className={styles.cadastroContainer}>
+                <div className={styles.cadastroLogo}>
                     <img style={{height: "60%"}} src={Logo} alt="Logo Bairro Bazar"/>
                 </div>
-                <div className="cadastro-titulo">
+                <div className={styles.cadastroTitulo}>
                     <p>Crie sua conta. É grátis!</p>
-                    <div className="login-social-icons">
+                    <div className={styles.loginSocialIcons}>
                         <img style={{height: "60%"}} src={GoogleIcon} alt="Logo Google"/>
                         <img style={{height: "60%"}} src={FacebookPinkIcon} alt="Logo Facebook"/>
                     </div>
                 </div>
-                <div className="cadastro-form">
+                <div className={styles.cadastroForm}>
                     <form action="">
-                        <div className="form-colunas">
+                        <div className={styles.formColunas}>
                             <div className="form-colunas-colunas">
                                 <input type="text" placeholder="Nome" />
                                 <input type="text" placeholder="E-mail" />
@@ -33,7 +33,7 @@ function Cadastro() {
                                 <input type="text" placeholder="Bairro" />
                                 <input type="text" placeholder="UF" />
                             </div>
-                            <div className="form-colunas-colunas">
+                            <div className={styles.formColunasColunas}>
                                 <input type="text" placeholder="Sobrenome" />
                                 <input type="text" placeholder="Senha" />
                                 <input type="text" placeholder="Telefone" />
@@ -45,7 +45,7 @@ function Cadastro() {
                     </form>
                 </div>
                 
-                <div className="cadastro-cadastro">
+                <div className={styles.cadastroCadastro}>
                     <p>Já tem uma conta? 
                         <a href="/login">
                             <span>Entre</span>

@@ -2,7 +2,7 @@ import React from 'react';
 import AppRoutes from './Routes/AppRoutes';
 import Footer from './Components/Footer/Footer';
 
-import './Styles/main.scss'
+import './Styles/main.module.scss'
 
 function App() {
   return (

@@ -47,7 +47,7 @@ nav {
     flex-direction: column;
     align-items: center;
 
-    .nav-container {
+    .navContainer {
         max-width: 1200px;
         width: 100%;
         height: 100%;
@@ -55,24 +55,24 @@ nav {
         align-items: center;
         left: 0;
 
-        .nav-container-left {
+        .navContainerLeft {
             display: flex;
             align-items: center;
             position: absolute;
             left: 0;
 
-            img, .nav-input-pesquisar {
+            img, .navInputPesquisar {
                 margin: 0 20px;
             }
         }
 
-        .nav-container-right {
+        .navContainerRight {
             display: flex;
             align-items: center;
             position: absolute;
             right: 0;
 
-            img, .without-space {
+            img, .withoutSpace {
                 margin: 0 20px;
                 cursor: pointer;
 
@@ -83,12 +83,12 @@ nav {
         img {
             height: 30%;
 
-            #img-logo {
+            .imgLogo {
                 height: 60% !important;
             }
         }
 
-        .nav-input-pesquisar {
+        .navInputPesquisar {
             display: flex;
             border: 1px solid $secondColor;
             border-radius: 10px;
@@ -98,7 +98,7 @@ nav {
                 margin: 0;
             }
 
-            #nav-input-pesquisar-input {
+            .navInputPesquisarInput {
                 border: none;
                 width: max-content;
             }
@@ -121,29 +121,29 @@ nav {
             }
         }
 
-        #btn-entrar {
+        .btnRntrar {
             border: none;
             cursor: pointer;
         }
 
-        #btn-cadastrar {
+        .btnCadastrar {
             border: none;
             cursor: pointer;
         }
 
-        .without-space {
+        .withoutSpace {
             display: flex;
         }
     }
 }
 
-.input-section {
+.inputSection {
     height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .menu-card {
+    .menuCard {
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -186,13 +186,13 @@ nav {
     margin: 20px 0;
 }
 
-.product-section {
+.productSection {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;  
     margin-bottom: 50px;
 
-    .product-card {
+    .productCard {
         height: 100%;
         box-shadow: $shadow;
         padding: 10px;
@@ -209,17 +209,17 @@ nav {
             word-wrap: break-word;
         }
 
-        .produto-titulo {
+        .produtoTitulo {
             font-size: 16px;
             font-weight: 600;
         }
 
-        .produto-descricao {
+        .produtoDescricao {
             font-size: 16px;
             font-style: italic;
         }
 
-        .produto-preco {
+        .produtoPreco {
             color: $redColor;
             font-size: 18px;
 
@@ -232,7 +232,7 @@ nav {
         }
     }
 
-    .div-fazer-proposta {
+    .divFazerProposta {
         border: 1px solid $blueColor;
         color: $blueColor;
         padding: 2px 5px;

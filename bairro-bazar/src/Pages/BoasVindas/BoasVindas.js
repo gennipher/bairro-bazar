@@ -43,8 +43,8 @@ function BoasVindas() {
                     <a href="/cadastro">
                         <button>Registre-se</button>
                     </a>
-                    <a href="/home">
-                        <button>Acessar sem logar</button>
+                    <a href="/login">
+                        <button>Logar</button>
                     </a>
                 </div>
             </div>

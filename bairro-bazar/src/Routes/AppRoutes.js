@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import { UserContext } from "../Context/UserContext";
 
 import Home from '../Pages/Home/Home'
 import BoasVindas from "../Pages/BoasVindas/BoasVindas";
@@ -9,6 +11,8 @@ import NovoProduto from "../Pages/NovoProduto/NovoProduto";
 
 
 function AppRoutes() {
+    const [userData, setUserData] = useContext(UserContext)
+    
     return (
         <BrowserRouter>
             <Routes>

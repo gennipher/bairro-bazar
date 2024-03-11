@@ -29,6 +29,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex-grow: 1;
 }
 
 button {
@@ -198,6 +203,11 @@ nav {
         padding: 10px;
         width: min-content;
 
+        .deletarCard {
+            display: flex;
+            justify-content: flex-end;
+        }
+
         img {
             size: 25%;
             margin: 10px;
@@ -212,6 +222,17 @@ nav {
         .produtoTitulo {
             font-size: 16px;
             font-weight: 600;
+            display: flex;
+            justify-content: flex-end;
+
+            span {
+                cursor: pointer;
+                margin: 10px;
+
+                &:hover {
+                    color: red;
+                }
+            }
         }
 
         .produtoDescricao {
@@ -249,4 +270,108 @@ nav {
         }
     }
     
+}
+
+.novoProduto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 76.5vh;
+
+    .novoProdutoForm {
+        p {
+            font-size: 32px;
+            margin: 20px;
+            width:100%;
+        }
+    
+        .novoProdutoFormInputs {
+            display: flex;
+            flex-direction: column;
+    
+            input {
+                border: 1px solid $secondColor;
+                padding: 10px;
+                max-width: 50vh;
+                margin: 10px;
+                font: $fontStyle;
+            }
+    
+            textarea {
+                border: 1px solid $secondColor;
+                padding: 10px;
+                max-width: 50vh;
+                margin: 10px;
+                font: $fontStyle;
+            }
+        
+            button {
+                background-color: $purpleColor;
+                color: $whiteColor;
+                border: 1px solid $purpleColor;
+                border-radius: 50px;
+                max-width: 50vh;
+                margin: 10px 0 20px 0;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $whiteColor;
+                    color: $purpleColor;
+                    border: 1px solid $purpleColor;
+                    transition: all 0.4s ease;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $lightGrayColor;
+    margin-top: 30px;
+    box-shadow: $shadow;
+    position: relative;
+    margin: auto;
+    bottom: 0;
+    width: 100%;
+
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+    
+        .footerPages {
+            display: flex;
+            flex-direction: row;
+            margin: 10px 40px;
+    
+            p {
+                padding: 10px;
+                cursor: pointer;
+    
+                &:hover {
+                    color: $purpleColor;
+                    transition: all 0.4s ease;
+                }
+            }
+        }
+    
+        .footerCopy {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 40px;
+    
+            img{
+                cursor: pointer;
+            }
+        }
+    
+        .footerSocialMedias {
+    
+            img{
+                margin: 0 10px;
+                cursor: pointer;
+            }
+        }
+    }
 }

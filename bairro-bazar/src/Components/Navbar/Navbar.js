@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Logo from '../../assets/logo-bairro-bazar.png'
 import Menu from '../../assets/menu-hamburguer.png'
@@ -9,8 +9,12 @@ import Batepapo from '../../assets/bate-papo.png'
 import Suporte from '../../assets/suporte.png'
 
 import styles from '../../Styles/main.module.scss'
+import { UserContext } from '../../Context/UserContext'
 
 function Navbar() {
+    const [userData, setUserData] = useContext(UserContext)
+    //alert(userData.message)
+
     return (
         <nav>
             <div className={styles.navContainer}>
@@ -24,21 +28,28 @@ function Navbar() {
                         <img src={Lupa} alt="lupa-pesqusiar"/>
                     </div>
                 </div>  
+                
                 <div className={styles.navContainerRight}>
-                    <a href="/novoProduto">
-                        <img src={AdicionarProduto} alt="adicionar produto"/>
-                    </a>
-                    <img src={Favoritos} alt="favoritos"/>
-                    <img src={Batepapo} alt="bate papo"/>
-                    <img src={Suporte} alt="suporte"/>
-                    <div className={styles.withoutSpace}>
-                        <a href="/login">
-                            <button  className={styles.btnEntrar} src="/login">Entrar</button>
-                        </a>
-                        <a href="/cadastro">
-                            <button  className={styles.btnCadastrar}>Cadastrar</button>
-                        </a>
-                    </div>
+                    {userData.isLogged 
+                        ?   <div className={styles.navContainerRight}>
+                                <a href="/novoProduto">
+                                    <img src={AdicionarProduto} alt="adicionar produto"/>
+                                </a>
+                                <img src={Favoritos} alt="favoritos"/>
+                                <img src={Batepapo} alt="bate papo"/>
+                                <img src={Suporte} alt="suporte"/>
+                                <button  className={styles.btnEntrar} src="/login">Sair</button>
+                            </div>
+                        :   <div className={styles.withoutSpace}>
+                                <a href="/login">
+                                    <button className={styles.btnEntrar} src="/login">Entrar</button>
+                                </a> 
+                                <a href="/cadastro">
+                                    <button  className={styles.btnCadastrar}>Cadastrar</button>
+                                </a>
+                            </div>
+                    }
+                        
                 </div>  
             </div>
         </nav>

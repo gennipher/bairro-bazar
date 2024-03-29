@@ -1,15 +1,9 @@
 import React from "react";
-
-import Navbar from "../../Components/Navbar/Navbar"
-import Card from "../../Components/Card/Card"
-import MenuCard from "../../Components/MenuCard/MenuCard"
-
 import styles from '../../Styles/main.module.scss'
 
 function NovoProduto() {
     return (
         <>
-            <Navbar />
             <section className={styles.novoProduto}>
                 <form className={styles.novoProdutoForm}>
                     <p>Adicionar Produto</p>
@@ -22,7 +16,6 @@ function NovoProduto() {
                 </form>       
             </section>
         </>
-        
     )
 }
 

@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import Logo from '../../assets/logo-bairro-bazar.png'
 import Menu from '../../assets/menu-hamburguer.png'
@@ -11,18 +12,25 @@ import Suporte from '../../assets/suporte.png'
 import styles from '../../Styles/main.module.scss'
 import { UserContext } from '../../Context/UserContext'
 
+
 function Navbar() {
     const [userData, setUserData] = useContext(UserContext)
-    //alert(userData.message)
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        setUserData({ isLogged: false, message: '' });
+        localStorage.removeItem('token');
+        navigate("/login")
+    };
 
     return (
         <nav>
             <div className={styles.navContainer}>
                 <div className={styles.navContainerLeft}>
-                    <img style={{height: "50%", cursor: "pointer"}} src={Menu} alt="menu-hamburguer" />
-                    <a href="/home">
+                    {/*<img style={{height: "50%", cursor: "pointer"}} src={Menu} alt="menu-hamburguer" />*/}
+                    <Link to="/home">
                         <img style={{height: "60%"}} src={Logo} alt="Logo Bairro Bazar"/>
-                    </a>
+                    </Link>
                     <div className={styles.navInputPesquisar}>
                         <input className={styles.navInputPesquisarInput} type="text" placeholder="Pesquisar"/>
                         <img src={Lupa} alt="lupa-pesqusiar"/>
@@ -32,13 +40,13 @@ function Navbar() {
                 <div className={styles.navContainerRight}>
                     {userData.isLogged 
                         ?   <div className={styles.navContainerRight}>
-                                <a href="/novoProduto">
-                                    <img src={AdicionarProduto} alt="adicionar produto"/>
-                                </a>
+                                <Link to="/home/novoProduto">
+                                    <img src={AdicionarProduto} alt="Adicionar Produto" />
+                                </Link>
                                 <img src={Favoritos} alt="favoritos"/>
                                 <img src={Batepapo} alt="bate papo"/>
                                 <img src={Suporte} alt="suporte"/>
-                                <button  className={styles.btnEntrar} src="/login">Sair</button>
+                                <button  className={styles.btnEntrar} onClick={handleLogout}>Sair</button>
                             </div>
                         :   <div className={styles.withoutSpace}>
                                 <a href="/login">

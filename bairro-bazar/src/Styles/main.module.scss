@@ -205,9 +205,9 @@ nav {
 
 .productSection {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Define a largura mínima de 300px para cada coluna */
-    gap: 20px; /* Espaçamento entre os cards */
-    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 10px 10px 50px 10px;
 
     .productCard {
         box-shadow: $shadow;
@@ -397,4 +397,9 @@ nav {
     align-items: stretch;
     width: 80vh;
     margin: 20px;
+}
+
+.meusAnunciosSection {
+    min-height: 75vh;
+    margin-left: 20px;
 }

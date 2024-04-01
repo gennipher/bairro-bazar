@@ -1,13 +1,16 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState } from "react"
 
 export const UserContext = createContext()
 
 export function UserProvider(props) {
+    const storedUserData = JSON.parse(localStorage.getItem("userData"))
 
-    const [userData, setUserData] = useState({
+    const [userData, setUserData] = useState(storedUserData || {
         isLogged: false,
-        email: '',
-        
+        email: "",
+        firstName: "",
+        lastName: "",
+        neighborhood: ""
     })
 
     return (

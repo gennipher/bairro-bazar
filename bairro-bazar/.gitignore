@@ -21,3 +21,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Arquivos .env
+.env
+
+# Arquivos de lock do npm (package-lock.json)
+package-lock.json
+
+# Arquivos do projeto npm (package.json)
+package.json
+
+# Arquivos de configuração do webpack
+webpack.config.js

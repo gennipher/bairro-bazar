@@ -1,3 +1,5 @@
+@import '~bootstrap/scss/bootstrap';
+
 $standardSpace: 16px;
 $fontStyle: $standardSpace sans-serif;
 
@@ -95,12 +97,15 @@ nav {
 
         .navInputPesquisar {
             display: flex;
+            align-items: center;
             border: 1px solid $secondColor;
             border-radius: 10px;
             padding: 0 15px;
+            height: 40px;
 
             img {
                 margin: 0;
+                height: 50%;
             }
 
             .navInputPesquisarInput {
@@ -139,6 +144,13 @@ nav {
         .withoutSpace {
             display: flex;
         }
+    }
+
+    .dropdownLink {
+        text-decoration: none !important;
+        color: #000 !important;
+        background-color: transparent !important;
+        border: none !important;
     }
 }
 
@@ -192,24 +204,26 @@ nav {
 }
 
 .productSection {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Define a largura mínima de 300px para cada coluna */
+    gap: 20px; /* Espaçamento entre os cards */
     margin-bottom: 50px;
 
     .productCard {
-        height: 100%;
         box-shadow: $shadow;
         padding: 10px;
-        width: min-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         .deletarCard {
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
         }
 
         img {
-            size: 25%;
+            width: 30vh;
             margin: 10px;
         }
 
@@ -223,7 +237,7 @@ nav {
             font-size: 16px;
             font-weight: 600;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
 
             span {
                 cursor: pointer;
@@ -374,4 +388,13 @@ nav {
             }
         }
     }
+}
+
+.editarPerfilSection {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    width: 80vh;
+    margin: 20px;
 }

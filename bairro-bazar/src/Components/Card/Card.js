@@ -1,26 +1,64 @@
-import React, { useContext } from "react";
-import { UserContext } from '../../Context/UserContext'
-import ProdutoArmario from '../../assets/produto-armario.png'
+import React, { useEffect, useState } from "react"
+import { jwtDecode } from "jwt-decode"
 import styles from '../../Styles/main.module.scss'
+import api from "../../Services/api"
 
-function Card() {
-    const [userData, setUserData] = useContext(UserContext)
+function Card({ productId, title, image, description, price, onDelete }) {
+    const [userPhone, setUserPhone] = useState("")
+    const token = localStorage.getItem('token')
+    const decoded = jwtDecode(token)
+    localStorage.setItem('userId', decoded.userId)
+    const id = decoded.userId
+
+    useEffect(() => {
+        const fetchUserPhone = async () => {
+            try {
+                const response = await api.get(`/users/${id}`)
+                setUserPhone(response.data.phone)
+            } catch (error) {
+                console.error("Erro ao obter o número de telefone do usuário:", error)
+            }
+        };
+
+        fetchUserPhone()
+    }, [id])
+
+    const formatPhoneNumberForWhatsApp = (phoneNumber) => {
+        const cleanedPhoneNumber = phoneNumber.replace(/\D/g, '')
+        const internationalPhoneNumber = `+55${cleanedPhoneNumber}`
+        return `https://wa.me/${internationalPhoneNumber}?text=Olá! Tenho interesse no produto "${title}" listado no Bairro Bazar. Poderia me fornecer mais informações?`
+    }
+
+    const handleMakeProposal = () => {
+        if (userPhone) {
+            const whatsappURL = formatPhoneNumberForWhatsApp(userPhone)
+            window.open(whatsappURL, '_blank')
+        } else {
+            alert('Número de telefone indisponível. Por favor, adicione um número de telefone em seu perfil.')
+        }
+    }
+
+    const handleDeleteCard = async () => {
+        try {
+            await api.delete(`/product/${productId}`)
+            onDelete(productId)
+        } catch (error) {
+            console.error("Erro ao deletar o card do produto:", error)
+        }
+    }
 
     return (
         <div className={styles.productCard}>
-            {userData.isLogged
-                ?   <div className={styles.produtoTitulo}>
-                        <p>Guarda Roupa de Solteiro Madeira Maciça</p>
-                        <span className={styles.materialSymbolsOutlined}>delete</span>
-                    </div>
-                :   <div className={styles.produtoTitulo}>
-                        <p>Guarda Roupa de Solteiro Madeira Maciça</p>
-                    </div>
-            }
-            <img src={ProdutoArmario} alt="Guarda Roupa de Solteiro Madeira Maciça" />
-            <p className={styles.produtoDescricao}>Vendo este guarda roupa de solteiro em madeira maciça super bem conservado. Aceito permuta, dinheiro, cartão ou pix. Não tenho frete, então é com retirada no local. </p>
-            <p className={styles.produtoPreco}>R$ 800,00</p>
-            <div className={styles.divFazerProposta}>
+            <div>
+                <div className={styles.produtoTitulo}>
+                    <p>{title}</p>
+                    <span className="material-symbols-outlined" onClick={handleDeleteCard}>delete</span>
+                </div>
+                <img src={image} alt={title} />
+                <p className={styles.produtoDescricao}>{description}</p>
+                <p className={styles.produtoPreco}>R$ {price},00</p>
+            </div>
+            <div className={styles.divFazerProposta} onClick={handleMakeProposal}>
                 <span>Fazer Proposta</span>
             </div>
         </div>
